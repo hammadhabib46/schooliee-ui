@@ -1,0 +1,196 @@
+/* Schooliee design tokens — taken from the Dashboard Revamp design file */
+:root {
+  --font-ui: 'Geist', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-display: 'Outfit', 'Geist', system-ui, sans-serif;
+
+  --bg: #EFEFEB;
+  --bg-image: none;
+  --surface: #FFFFFF;
+  --surface-2: #F4F4F0;
+  --surface-3: #E7E8E2;
+  --well: #F4F4F0;
+  --border: #E3E3DD;
+  --line: #ECECE6;
+  --text: #141414;
+  --muted: #5E5E58;
+  --faint: #8A8A83;
+  --track: #E6E6E0;
+  --hatch: #CFCFC8;
+
+  --ink: #141414;
+  --on-ink: #FFFFFF;
+  --ink-2: #2E2E2C;
+  --ink-muted: #A3A39C;
+  --ink-line: #3A3A38;
+  --ink-card: #141414;
+  --solid: #141414;
+  --on-solid: #FFFFFF;
+
+  /* "selected" — ink in light, lime in dark (per design) */
+  --sel: #141414;
+  --on-sel: #FFFFFF;
+  --sel-soft: rgba(255, 255, 255, 0.14);
+  /* quiet selection: tabs, chips, segments, nav — never competes with the primary action */
+  --quiet: #E9E9E3;
+  --on-quiet: #141414;
+
+  --accent: #C5F15C;
+  --on-accent: #16210A;
+  --accent-edge: #9BC23A;
+  --accent-soft: #EAF7CF;
+  --accent-dim: rgba(155, 194, 58, 0.5);
+  --accent-text: #3B6309;
+  --accent-grad: #C5F15C;
+
+  --danger: #B33A2A;
+  --danger-soft: #FBE8E4;
+  --warn: #8A5D00;
+  --warn-soft: #F8EFD8;
+  --info: #2F4FA0;
+  --info-soft: #E6ECFA;
+  --teal: #1F4A3A;
+  --teal-soft: #DDEDE6;
+
+  --hero-bg: #141414;
+  --hero-text: #FFFFFF;
+  --hero-muted: rgba(255, 255, 255, 0.62);
+  --hero-accent: #C5F15C;
+  --hero-track: rgba(255, 255, 255, 0.13);
+  --hero-chip: rgba(255, 255, 255, 0.1);
+  --on-hero-accent: #141414;
+
+  --av-1-bg: #EAF2DD; --av-1-fg: #2E4A0C;
+  --av-2-bg: #E7E8F0; --av-2-fg: #2D3150;
+  --av-3-bg: #F3EADF; --av-3-fg: #5B3B16;
+  --av-4-bg: #DDEDE6; --av-4-fg: #1F4A3A;
+
+  --shadow-pop: 0 24px 60px rgba(20, 20, 20, 0.14), 0 2px 6px rgba(20, 20, 20, 0.06);
+  --shadow-soft: 0 1px 2px rgba(20, 20, 20, 0.04);
+  --scrim: rgba(20, 20, 20, 0.32);
+
+  --r-card: 26px;
+  --r-inner: 18px;
+  --r-pill: 999px;
+
+  color-scheme: light;
+}
+
+:root[data-theme='dark'] {
+  /* "Deep ink": near-black with an olive undertone, hairline-edged cards,
+     off-white text. Lime is small and precise; big surfaces are tinted, never neon. */
+  --bg: #0A0B09;
+  --bg-image: none;
+  --surface: #1B1C19;     /* cards */
+  --surface-2: #262723;   /* raised items inside cards */
+  --surface-3: #30312C;
+  --well: #121310;        /* inputs, icon buttons, table heads */
+  --border: transparent;   /* no outlines in dark — surfaces separate by fill */
+  --line: rgba(236, 240, 220, 0.08);
+  --text: #F4F5EF;
+  --muted: #ABADA4;
+  --faint: #7A7C74;
+  --track: #2C2D28;
+  --hatch: #4B4D45;
+
+  --ink: #F4F5EF;
+  --on-ink: #10110E;
+  --ink-2: #2E302A;
+  --ink-muted: #ABADA4;
+  --ink-line: #2E302A;
+  --ink-card: #121310;
+  --solid: #262723;
+  --on-solid: #F4F5EF;
+
+  --sel: #F4F5EF;          /* the one primary action: soft white pill */
+  --on-sel: #10110E;
+  --sel-soft: rgba(16, 17, 14, 0.1);
+  --quiet: #30312C;
+  --on-quiet: #F4F5EF;
+
+  --accent: #C6EC5B;
+  --on-accent: #12160A;
+  --accent-edge: #9DBE3C;
+  --accent-dim: rgba(198, 236, 91, 0.32);
+  --accent-soft: rgba(198, 236, 91, 0.15);
+  --accent-text: #C6EC5B;
+  --accent-grad: #C6EC5B;
+
+  --danger: #E8907F;
+  --danger-soft: rgba(232, 144, 127, 0.15);
+  --warn: #DDBE72;
+  --warn-soft: rgba(221, 190, 114, 0.15);
+  --info: #9FB4E0;
+  --info-soft: rgba(159, 180, 224, 0.15);
+  --teal: #A9CBBB;
+  --teal-soft: #1C2622;
+
+  /* focal block: deep olive surface, lime figures — tinted, not neon */
+  --hero-bg: linear-gradient(160deg, #2E3B16 0%, #1C240E 100%);
+  --hero-text: #EEF6D6;
+  --hero-muted: rgba(238, 246, 214, 0.72);
+  --hero-accent: #C6EC5B;
+  --hero-track: rgba(198, 236, 91, 0.2);
+  --hero-chip: rgba(198, 236, 91, 0.18);
+  --on-hero-accent: #12160A;
+
+  --av-1-bg: #30312C; --av-1-fg: #E8E9E2;
+  --av-2-bg: #30312C; --av-2-fg: #E8E9E2;
+  --av-3-bg: #30312C; --av-3-fg: #E8E9E2;
+  --av-4-bg: #30312C; --av-4-fg: #E8E9E2;
+
+  --shadow-pop: 0 30px 80px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(236, 240, 220, 0.08);
+  --shadow-soft: none;
+  --scrim: rgba(4, 5, 3, 0.65);
+
+  color-scheme: dark;
+}
+
+/* Dark-mode component rules */
+/* Surfaces separate by fill, not by outlines. */
+:root[data-theme='dark'] .card,
+:root[data-theme='dark'] .rail-group,
+:root[data-theme='dark'] .tabs,
+:root[data-theme='dark'] .topbar-tools,
+:root[data-theme='dark'] .school-switch,
+:root[data-theme='dark'] .searchbar,
+:root[data-theme='dark'] .seg,
+:root[data-theme='dark'] .card-ink,
+:root[data-theme='dark'] .new-btn { border-color: transparent !important; box-shadow: none; }
+:root[data-theme='dark'] .card-hero { border: 0; }
+:root[data-theme='dark'] .hero-panel { box-shadow: none; }
+:root[data-theme='dark'] .icon-btn,
+:root[data-theme='dark'] .input,
+:root[data-theme='dark'] .textarea,
+:root[data-theme='dark'] .select,
+:root[data-theme='dark'] .search { background-color: var(--surface-2); border-color: transparent; }
+:root[data-theme='dark'] .input:focus, :root[data-theme='dark'] .textarea:focus, :root[data-theme='dark'] .select:focus { border-color: var(--muted); }
+:root[data-theme='dark'] .btn:not(.primary):not(.ink):not(.accent):not(:disabled) { background: var(--surface-2); border-color: transparent; }
+:root[data-theme='dark'] .btn:not(.primary):not(.ink):not(.accent):not(:disabled):hover { background: var(--surface-3); }
+:root[data-theme='dark'] .chip:not(.on) { background: var(--surface-2); border-color: transparent; }
+:root[data-theme='dark'] .card .card { background: var(--surface-2); }
+:root[data-theme='dark'] .tile,
+:root[data-theme='dark'] .item-card { background: var(--surface-2); }
+:root[data-theme='dark'] .table th { background: var(--well); }
+:root[data-theme='dark'] .table td { border-bottom-color: var(--line); }
+:root[data-theme='dark'] .table tbody tr:hover,
+:root[data-theme='dark'] .table tbody tr.hi { background: var(--surface-2); }
+:root[data-theme='dark'] .pill.ok { background: var(--accent-soft); }
+:root[data-theme='dark'] .pill.danger { background: var(--danger-soft); box-shadow: none; }
+:root[data-theme='dark'] .pill.warn { background: var(--warn-soft); box-shadow: none; }
+:root[data-theme='dark'] .pill.info { background: var(--info-soft); box-shadow: none; }
+:root[data-theme='dark'] .card-hero .pill { color: var(--hero-accent) !important; }
+:root[data-theme='dark'] .card-ink { border: 1px solid var(--border); }
+:root[data-theme='dark'] .display { color: inherit; }
+:root[data-theme='dark'] .drawer, :root[data-theme='dark'] .modal, :root[data-theme='dark'] .menu { background: var(--surface); border-color: var(--border); }
+:root[data-theme='dark'] .rail-logo { box-shadow: 0 0 0 1px rgba(198, 236, 91, 0.25); }
+
+/* Light mode: containers without outlines; controls keep a hairline. */
+:root:not([data-theme='dark']) .card,
+:root:not([data-theme='dark']) .rail-group,
+:root:not([data-theme='dark']) .tabs,
+:root:not([data-theme='dark']) .topbar-tools,
+:root:not([data-theme='dark']) .school-switch,
+:root:not([data-theme='dark']) .searchbar,
+:root:not([data-theme='dark']) .seg { border-color: transparent; }
+:root:not([data-theme='dark']) .card .card { border-color: var(--border); }
+:root[data-theme='dark'] :is(.todo-row, .card .card, .tile, .item-card) :is(.btn:not(.primary):not(.ink):not(.accent):not(:disabled), .icon-btn, .chip:not(.on)) { background: var(--surface-3); }
